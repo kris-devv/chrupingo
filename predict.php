@@ -15,7 +15,7 @@
         <?php 
             include "load_predicts.php";
         ?>
-        <form action="save_predicts" method="post">
+        <form action="predict.php" method="post">
         <h1>CHRUPINGO</h1>
         <h2 id="info">Wybierz swoje predykcje na dzisiejszy dzien:</h2>
         <table>

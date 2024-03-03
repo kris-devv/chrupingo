@@ -1,8 +1,6 @@
 <?php  
 
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST["dalej"])) {
-        include "db_connect.php";
-
         $name = $_POST["name"];
 
         if(empty($name)) {

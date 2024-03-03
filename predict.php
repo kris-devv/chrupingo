@@ -35,7 +35,7 @@
                 <td id="col9" class="niezaznaczone" onclick="clicked(this.id)"><select name="pred9"><?php load_options(); ?></select></td>
             </tr>
         </table>
-        <input type="submit" name="save" value="Zatwierdz">
+        <input type="submit" name="save" value="Zatwierdz" id="saveButton">
         </form>
     </main>
     

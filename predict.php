@@ -15,8 +15,11 @@
         <?php 
             include "load_predicts.php";
         ?>
-        <form action="predict.php" method="post">
+        <form action="load_predicts.php" method="post" id="form">
         <h1>CHRUPINGO</h1>
+        <?php if(isset($_GET["error"])) {?>
+        <p class="error"> <?php echo $_GET["error"]; ?> </p>
+        <?php } ?>
         <h2 id="info">Wybierz swoje predykcje na dzisiejszy dzien:</h2>
         <table>
             <tr>
@@ -35,6 +38,7 @@
                 <td id="col9" class="niezaznaczone" onclick="clicked(this.id)"><select name="pred9"><?php load_options(); ?></select></td>
             </tr>
         </table>
+        <?php echo '<input type="hidden" name="name" value="' . $_GET["name"] . '">' ?>
         <input type="submit" name="save" value="Zatwierdz" id="saveButton">
         </form>
     </main>

@@ -1,12 +1,10 @@
 <?php 
 
-if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST["save"])) {
+if(isset($_POST["save"])) {
     // TODO: Pytanie czy napewno chce zatwierdzić predicty
-    
     include "db_connect.php";
-    
-    //TODO: $name - jak do chuja mam wziąć ten zajebany nick (form otwiera mi tak jakby nową stronę w które url nie ma name=Krystek)
-    // $name = $_GET["name"]; 
+
+    $name = $_POST["name"]; 
     $pred1 = $_POST["pred1"];
     $pred2 = $_POST["pred2"];
     $pred3 = $_POST["pred3"];
@@ -17,14 +15,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST["save"])) {
     $pred8 = $_POST["pred8"];
     $pred9 = $_POST["pred9"];
 
-
-    //echo "" . $name . " ".$pred1." ".$pred2." ".$pred3." ".$pred4." ".$pred5." ".$pred6." ".$pred7." ".$pred8." ".$pred9;
-
-
-    // TODO: Sprawdź czy selecty nie są puste
     if ($pred1 == 0 or $pred2 == 0 or $pred3 == 0 or $pred4 == 0 or $pred5 == 0 or $pred6 == 0 or $pred7 == 0 or $pred8 == 0 or $pred9 == 0) {
-        // TODO: Po kliknięciu przycisku wszystko się usuwa, trzbe to ogarnąć
-        echo "Nie wybrano wszystkich predykcji";
+        // TODO: Po kliknięciu przycisku wszystko się usuwa, trzba to ogarnąć
+        header("Location: predict.php?name=". $name ."&error=Nie zaznaczyłeś wszystkich predykcji.");
     } else {
         // TODO: Sprawdź czy predicty się nie powtarzają
         // Jeżeli tak to error
@@ -33,7 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST["save"])) {
         VALUES ('$name', '$pred1', '$pred2', '$pred3', '$pred4', '$pred5', '$pred6', '$pred7', '$pred8', '$pred9')";
                 
         if($conn->query($sql) == TRUE) {
-            echo "New record created successfully";
+            header("Location: podglad.php?name=" . $name);
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }$conn->close();

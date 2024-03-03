@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="glowna.php" method="post">
+    <form action="check.php" method="post">
     <?php if(isset($_GET["error"])) {?>
         <p class="error"> <?php echo $_GET["error"]; ?> </p>
     <?php } ?>

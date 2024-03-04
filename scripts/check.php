@@ -1,19 +1,23 @@
 <?php  
 
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST["dalej"])) {
+
         $name = $_POST["name"];
 
-        if(empty($name)) {
-            header("Location: glowna.php?error=Nie podałes nazwy.");
-            exit();
+        try {
+            require_once 'db_connect.php';
+            
+            $query = "SELECT * FROM users WHERE name = '$name';";
+            $result = mysqli_query($conn, $query);
+
+            if(mysqli_num_rows($result) > 0) {
+                header("Location: podglad.php?name='$name'");
+            }else{
+                header("Location: predict.php?name='$name'");
+            }
+
+        } catch (PDOException $th) {
+            die("BŁĄD!" . $th->getMessage());
         }
-
-        // TODO: Sprawdzanie czy użytkownik istnieje w bazie
-
-        // Jeżeli tak to przekierowanie do podglad.php
-        header("Location: predict.php?name=" . $name);
-
-        // Jeżeli nie to przekierowanie do predict.php
-        // header("Location: predict.php");
-    }
+        }
 ?>

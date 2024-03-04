@@ -17,7 +17,7 @@
         <h2 id="info">Kliknij w odpowiednie pole gdy coś zauwarzysz:</h2>
         <table>
             <tr>
-                <td id="col1" class="niezaznaczone" onclick="clicked(this.id)"><?php echo $_GET["col1"]; ?></td>
+                <td id="col1" class="niezaznaczone" onclick="clicked(this.id)"></td>
                 <td id="col2" class="niezaznaczone" onclick="clicked(this.id)">Wejście do klasy z energolem</td>
                 <td id="col3" class="niezaznaczone" onclick="clicked(this.id)">Spanko na lekcji</td>
             </tr>

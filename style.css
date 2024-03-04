@@ -21,6 +21,26 @@ button {
     width: 100%;
     height: 100%;
 }
+select {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    appearance: none;
+}
+select:focus {
+    outline-color: #A66A2C;
+    
+}
+select option {
+    text-align: center;
+    background-color: wheat;
+    border: 1px solid black;
+}
+select option:hover {
+    background-color: #A66A2C;
+}
 
 #main{
     font-family: "Comic Neue", cursive;
@@ -32,10 +52,20 @@ button {
     padding: 10px;
     text-align: center;
 }
+#saveButton {
+    width: 200px;
+    height: 60px;
+    font-size: large;
+    background-color: #A66A2C;
+    color: wheat;
+    border: none;
+    border-radius: 10px;
+
+}
 
 .zaznaczone {
     
-    background-color: #B7A684;
+    background-color: #A66A2C;
 }
 
 .niezaznaczone {

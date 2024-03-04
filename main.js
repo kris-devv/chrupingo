@@ -1,15 +1,19 @@
-function clicked(id){   
+function clicked(id) {
     element = document.getElementById(id);
-    
-    if(element.classList.contains("niezaznaczone")) {   
+
+    if (element.classList.contains("niezaznaczone")) {
         document.getElementById(id).classList.remove("niezaznaczone");
         document.getElementById(id).classList.add("zaznaczone");
-    } else{
+    } else {
         document.getElementById(id).classList.remove("zaznaczone");
         document.getElementById(id).classList.add("niezaznaczone");
     }
 
     checkWin();
+
+}
+
+function load() {
 
 }
 
@@ -26,24 +30,24 @@ function checkWin() {
 
     var info = document.getElementById("info");
 
-    if(col1 && col2 && col3) {
+    if (col1 && col2 && col3) {
         info.innerHTML = "CHRUPINGOOOOO!!!!"
-    } else if(col4 && col5 && col6) {
+    } else if (col4 && col5 && col6) {
         info.innerHTML = "CHRUPINGOOOOO!!!!"
-    } else if(col7 && col8 && col9) {
+    } else if (col7 && col8 && col9) {
         info.innerHTML = "CHRUPINGOOOOO!!!!"
-    } else if(col1 && col4 && col7) {
+    } else if (col1 && col4 && col7) {
         info.innerHTML = "CHRUPINGOOOOO!!!!"
-    } else if(col2 && col5 && col8) {
+    } else if (col2 && col5 && col8) {
         info.innerHTML = "CHRUPINGOOOOO!!!!"
-    } else if(col3 && col6 && col9) {
+    } else if (col3 && col6 && col9) {
         info.innerHTML = "CHRUPINGOOOOO!!!!"
-    } else if(col1 && col5 && col9) {
+    } else if (col1 && col5 && col9) {
         info.innerHTML = "CHRUPINGOOOOO!!!!"
-    } else if(col3 && col5 && col7) {
+    } else if (col3 && col5 && col7) {
         info.innerHTML = "CHRUPINGOOOOO!!!!"
     } else {
-        
+
     }
 
 }

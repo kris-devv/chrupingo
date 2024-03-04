@@ -1,0 +1,18 @@
+# Baza danych
+## tabela - users
+- id primary key int not null auto increment
+- user_name varchar(20) 
+- predict1_id int
+- predict2_id int
+- predict3_id int
+- predict4_id int
+- predict5_id int
+- predict6_id int
+- predict7_id int
+- predict8_id int
+- predict9_id int
+
+## tabela - all_predicts
+- id int not null auto increment  
+- name varchar(35)                  
+- czy_stalo boolean               

@@ -1,6 +1,6 @@
 <?php 
-    require_once '../other/db_info.php';
-    $conn = mysqli_connect($ip, $user, $paswd, $name);
+    include 'other/db_info.php';
+    $conn = mysqli_connect($ip, $user, $paswd, $db_name);
 
     if (!$conn) {
         die("Conn failed". mysqli_connect_error());

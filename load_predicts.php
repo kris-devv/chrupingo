@@ -23,7 +23,7 @@ if(isset($_POST["save"])) {
         // Jeżeli tak to error
         // Jeżeli nie to zapisanie do bazy i przekierowanie do podglad.php
         $sql = "INSERT INTO users (name, predict1, predict2, predict3, predict4, predict5, predict6, predict7, predict8, predict9) 
-        VALUES ('$name', '$pred1', '$pred2', '$pred3', '$pred4', '$pred5', '$pred6', '$pred7', '$pred8', '$pred9')";
+        VALUES ('$name', '$pred1', '$pred2', '$pred3', '$pred4', '$pred5', '$pred6', '$pred7', '$pred8', '$pred9');";
                 
         if($conn->query($sql) == TRUE) {
             header("Location: podglad.php?name=" . $name);

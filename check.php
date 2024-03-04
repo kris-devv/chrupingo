@@ -11,9 +11,9 @@
             $result = mysqli_query($conn, $query);
 
             if(mysqli_num_rows($result) > 0) {
-                header("Location: podglad.php?name='$name'");
+                header("Location: podglad.php?name=$name");
             }else{
-                header("Location: predict.php?name='$name'");
+                header("Location: predict.php?name=$name");
             }
 
         } catch (PDOException $th) {

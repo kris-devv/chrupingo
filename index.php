@@ -13,7 +13,7 @@
 </head>
 <body>
     <main>
-    <form  action="scripts/check.php" id="formularz1" method="post">
+    <form  action="check.php" id="formularz1" method="post">
     <label for="name">Podaj nick:</label> <br>
     <input type="text" name="name" placeholder="chrupek" id="input1"> <br>
     <button type="submit" class="button-48" name="dalej"><span class="text">DALEJ</span></button>

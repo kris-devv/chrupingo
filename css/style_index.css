@@ -25,6 +25,16 @@ body{
     transform: translate(-50%,-50%);
     
 }
+#githubs{
+  left:93%;
+  top: 85%;
+  position: absolute;
+}
+#wersja{
+  float: left;
+  top:94%;
+  position: absolute;
+}
 
 .button-48 {
   appearance: none;
@@ -77,16 +87,22 @@ body{
   animation: opacityFallbackIn 0s step-start forwards;
   clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
   cursor: url('chrupek.png');
-  border-image: url('chrupek-cursor.png') 30 / 19px round;;
+  background-image: url("chrupek-przerwa5px.png");
+  background-repeat: repeat;
+
 }
 
 .button-48:after {
   background-color: #FFFFFF;
   cursor: url('chrupek.png');
-  border-image: url('chrupek-cursor.png') 30 / 19px round;;
+  background-image: url("chrupek-przerwa5px.png");
+  background-repeat: repeat;
+  font-weight: 700;
+  color: white;
 }
 
 .button-48 span {
   z-index: 1;
   position: relative;
+  font-weight: 700;
 }

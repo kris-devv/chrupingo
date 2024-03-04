@@ -1,0 +1,52 @@
+*{
+    font-family: 'Madimi One', sans-serif;
+    font-weight: 400;
+}
+body{
+    background-color: wheat;
+}
+main{
+    margin: 0;
+    top: 50%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+#lewo{
+    float: left;
+    margin-right: 50px;
+}
+#prawo{
+    float:right;
+    margin-left:50px;
+}
+#strzalka{
+    clear: both;
+    top:80%;
+    margin-left: 40px;
+    position: absolute;
+}
+
+#strzalka img:hover{
+    animation-name: animacja1;
+    animation-duration: 0.5s;
+    width: 140px;
+    height: 140px;
+    margin-left: 0px;
+    position:absolute;
+}
+
+@keyframes animacja1 {
+    0%{
+        width: 100px;
+        height: 100px;
+        margin-left: 40px;
+    }
+    100%{
+        width: 140px;
+        height: 140px;
+        margin-left: 0px;
+    }    
+}

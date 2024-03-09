@@ -27,7 +27,7 @@
     <button type="submit" class="button-48" name="dalej"><span class="text">DALEJ</span></button>
     <!-- TODO: Dodaj przycisk graj jako gość -->
     </form>
-    <p id="wersja">V.0.1</p>
+    <p id="wersja">V.0.3</p>
     <div id="githubs">
         <a href="githubs.html">
             <img src="img/github-mark.png" alt="Github Link" height="100px" width="100px">

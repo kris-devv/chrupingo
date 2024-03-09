@@ -14,24 +14,28 @@
     <main id="main">
         <?php 
             include "load_podglad.php";
+
+            if(!isset($_SESSION["name"])) {
+                header('Location: index.php');
+            }
         ?>
         <h1>CHRUPINGO</h1>
         <h2 id="info">Sprawdź swoje wyniki:</h2>
         <table>
             <tr>
-                <td id="col1" class="niezaznaczone"><?php load_predicts(); ?></td>
-                <td id="col2" class="niezaznaczone"><?php load_predicts(); ?></td>
-                <td id="col3" class="niezaznaczone"><?php load_predicts(); ?></td>
+                <td id="col1" class="niezaznaczone"><?php load_preds("col1"); ?></td>
+                <td id="col2" class="niezaznaczone"><?php load_preds("col2"); ?></td>
+                <td id="col3" class="niezaznaczone"><?php load_preds("col3"); ?></td>
             </tr>
             <tr>
-                <td id="col4" class="niezaznaczone"><?php load_predicts(); ?></td>
-                <td id="col5" class="niezaznaczone"><?php load_predicts(); ?></td>
-                <td id="col6" class="niezaznaczone"><?php load_predicts(); ?></td>
+                <td id="col4" class="niezaznaczone"><?php load_preds("col4"); ?></td>
+                <td id="col5" class="niezaznaczone"><?php load_preds("col5"); ?></td>
+                <td id="col6" class="niezaznaczone"><?php load_preds("col6"); ?></td>
             </tr>
             <tr>
-                <td id="col7" class="niezaznaczone"><?php load_predicts(); ?></td>
-                <td id="col8" class="niezaznaczone"><?php load_predicts(); ?></td>
-                <td id="col9" class="niezaznaczone"><?php load_predicts(); ?></td>
+                <td id="col7" class="niezaznaczone"><?php load_preds("col7"); ?></td>
+                <td id="col8" class="niezaznaczone"><?php load_preds("col8"); ?></td>
+                <td id="col9" class="niezaznaczone"><?php load_preds("col9"); ?></td>
             </tr>
         </table>
     </main>

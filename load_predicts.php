@@ -2,6 +2,11 @@
 
 session_start();
 
+if(!isset($_SESSION["name"])) {
+    header('Location: index.php');
+}
+echo 'Name: '.$_SESSION['name'];
+
 if(isset($_POST["save"])) {
     // TODO: Pytanie czy napewno chce zatwierdzić predicty
     include "db_connect.php";

@@ -1,6 +1,11 @@
 <?php
 session_start();
-function load_predicts() {
+
+if(!isset($_SESSION["name"])) {
+    header('Location: index.php');
+}
+echo 'Name: '.$_SESSION['name'];
+function load_preds($col_id) {
 
     include "db_connect.php";
 
@@ -19,7 +24,17 @@ function load_predicts() {
     $result = mysqli_query($conn, $query);
 
     foreach ($result as $row) {
-        echo "" . $row['predict_name'];
+        echo $row["czy_sie_stalo"]."<br>";
+        echo $row['predict_name'];
+
+        // Zaznaczanie kwadrata jeżeli się stało
+        if($row["czy_sie_stalo"] == 1) {
+            echo '<script type="text/javascript">
+                var row = document.getElementById("'.$col_id.'");
+                row.classList.remove("niezaznaczone");
+                row.classList.add("zaznaczone");
+                </script>';
+        }
     }
     
     $_SESSION["pred_num"]++;

@@ -34,10 +34,6 @@
                 <td id="col9" class="niezaznaczone"><?php load_predicts(); ?></td>
             </tr>
         </table>
-        <?php 
-            echo '<input type="hidden" name="name" value="' . $_GET["name"] . '">';
-        ?>
-        <?php echo '<input type="hidden" name="num" value="1">'; ?>
     </main>
     
 </body>

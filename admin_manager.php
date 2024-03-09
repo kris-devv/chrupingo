@@ -9,13 +9,14 @@ if(isset($_POST["save"])) {
 
     include "db_connect.php";
 
+    // Wzięcie ilości wierszy z all_predicts
     $query = "SELECT COUNT(ID) AS num FROM all_predicts;";
     $result = mysqli_query($conn, $query);
-
     foreach($result as $row) {
         $num =  $row["num"];
     }
 
+    // Update wszystkich czy_sie_stalo
     for($i = 1; $i <= $num; $i++) {
         $czy_stalo = $_POST['pred'.$i];
         $query = "UPDATE all_predicts SET czy_sie_stalo = $czy_stalo WHERE ID = $i;";
@@ -38,8 +39,7 @@ function load_all_predicts() {
     $query = "SELECT * FROM all_predicts";
     $result = mysqli_query($conn, $query);
 
-    // Wygenerowanie opcji do selecta html
-
+    // Wygenerowanie tabeli do zarządzania predictami
     foreach ($result as $row) {
         echo "<tr>";
         echo "<td>" . $row['name'] . "</td>";

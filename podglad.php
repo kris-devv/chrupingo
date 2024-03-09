@@ -9,32 +9,35 @@
     <link rel="icon" href="img/chrupek.png">
     <title>CHRUPINGO</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="scripts/main.js"></script>
 </head>
 <body>    
     <main id="main">
+        <?php 
+            include "load_podglad.php";
+        ?>
         <h1>CHRUPINGO</h1>
-        <h2 id="info">Kliknij w odpowiednie pole gdy coś zauwarzysz:</h2>
+        <h2 id="info">Sprawdź swoje wyniki:</h2>
         <table>
             <tr>
-                <td id="col1" class="niezaznaczone" onclick="clicked(this.id)">Aha</td>
-                <td id="col2" class="niezaznaczone" onclick="clicked(this.id)">Wejście do klasy z energolem</td>
-                <td id="col3" class="niezaznaczone" onclick="clicked(this.id)">Spanko na lekcji</td>
+                <td id="col1" class="niezaznaczone"><?php load_predicts(); ?></td>
+                <td id="col2" class="niezaznaczone"><?php load_predicts(); ?></td>
+                <td id="col3" class="niezaznaczone"><?php load_predicts(); ?></td>
             </tr>
             <tr>
-                <td id="col4" class="niezaznaczone" onclick="clicked(this.id)">Dasz książke?</td>
-                <td id="col5" class="niezaznaczone" onclick="clicked(this.id)">Speed run jedynki</td>
-                <td id="col6" class="niezaznaczone" onclick="clicked(this.id)">Wejscie w kurtce i butach</td>
+                <td id="col4" class="niezaznaczone"><?php load_predicts(); ?></td>
+                <td id="col5" class="niezaznaczone"><?php load_predicts(); ?></td>
+                <td id="col6" class="niezaznaczone"><?php load_predicts(); ?></td>
             </tr>
             <tr>
-                <td id="col7" class="niezaznaczone" onclick="clicked(this.id)">Spóźnienie 15 minut</td>
-                <td id="col8" class="niezaznaczone" onclick="clicked(this.id)">Skip lekcji</td>
-                <td id="col9" class="niezaznaczone" onclick="clicked(this.id)">Siedzenie na telefonie</td>
+                <td id="col7" class="niezaznaczone"><?php load_predicts(); ?></td>
+                <td id="col8" class="niezaznaczone"><?php load_predicts(); ?></td>
+                <td id="col9" class="niezaznaczone"><?php load_predicts(); ?></td>
             </tr>
         </table>
         <?php 
-            include "load_predicts.php";
+            echo '<input type="hidden" name="name" value="' . $_GET["name"] . '">';
         ?>
+        <?php echo '<input type="hidden" name="num" value="1">'; ?>
     </main>
     
 </body>

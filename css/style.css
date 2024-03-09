@@ -6,12 +6,6 @@ h1 {
     font-size: 50px;
 }
 
-td {
-    border-radius: 20px;
-    width: 200px;
-    height: 200px;
-}
-
 table {
     margin: auto;
     margin-bottom: 20px;
@@ -70,4 +64,10 @@ select option:hover {
 
 .niezaznaczone {
     background-color: rgb(225, 202, 159);
+}
+
+.bingo td {
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
 }

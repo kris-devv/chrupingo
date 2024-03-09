@@ -14,14 +14,10 @@
     <main id="main">
         <?php 
             include "load_podglad.php";
-
-            if(!isset($_SESSION["name"])) {
-                header('Location: index.php');
-            }
         ?>
         <h1>CHRUPINGO</h1>
         <h2 id="info">Sprawdź swoje wyniki:</h2>
-        <table>
+        <table class=".bingo">
             <tr>
                 <td id="col1" class="niezaznaczone"><?php load_preds("col1"); ?></td>
                 <td id="col2" class="niezaznaczone"><?php load_preds("col2"); ?></td>

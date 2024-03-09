@@ -21,7 +21,7 @@
         <p class="error"> <?php echo $_GET["error"]; ?> </p>
         <?php } ?>
         <h2 id="info">Wybierz swoje predykcje na dzisiejszy dzien:</h2>
-        <table class=".bingo">
+        <table class="bingo">
             <tr>
                 <td id="col1" class="niezaznaczone" onclick="clicked(this.id)"><select name="pred1"><?php load_options(); ?></select></td>
                 <td id="col2" class="niezaznaczone" onclick="clicked(this.id)"><select name="pred2"><?php load_options(); ?></select></td>

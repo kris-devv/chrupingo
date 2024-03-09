@@ -18,6 +18,7 @@
     <h1>Admin Panel</h1>
     <table><?php load_all_predicts(); ?></table>
     <input type="submit" name="save" value="Zatwierdz" id="saveButton">
+    <!-- TODO: Dodaj przycisk reset - do resetu wczystkich czy_sie_stalo -->
     </form>
     </main>
     

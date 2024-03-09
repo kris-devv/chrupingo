@@ -15,27 +15,6 @@ button {
     width: 100%;
     height: 100%;
 }
-select {
-    background-color: transparent;
-    border: none;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    appearance: none;
-}
-select:focus {
-    outline-color: #A66A2C;
-    
-}
-select option {
-    text-align: center;
-    background-color: wheat;
-    border: 1px solid black;
-}
-select option:hover {
-    background-color: #A66A2C;
-}
-
 #main{
     font-family: "Comic Neue", cursive;
     font-weight: 400;
@@ -66,8 +45,27 @@ select option:hover {
     background-color: rgb(225, 202, 159);
 }
 
-.bingo td {
+.bingo td{
     border-radius: 20px;
     width: 200px;
     height: 200px;
+}
+.bingo select {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    appearance: none;
+}
+.bingo select:focus {
+    outline: none;
+    border: 2px solid #A66A2C;
+    border-radius: 20px;
+    
+}
+.bingo option {
+    text-align: center;
+    background-color: wheat;
+    border: 1px solid black;
 }

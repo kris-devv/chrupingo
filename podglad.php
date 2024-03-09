@@ -17,7 +17,7 @@
         ?>
         <h1>CHRUPINGO</h1>
         <h2 id="info">Sprawdź swoje wyniki:</h2>
-        <table class=".bingo">
+        <table class="bingo">
             <tr>
                 <td id="col1" class="niezaznaczone"><?php load_preds("col1"); ?></td>
                 <td id="col2" class="niezaznaczone"><?php load_preds("col2"); ?></td>

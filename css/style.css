@@ -1,5 +1,12 @@
+*{
+    font-family: 'Madimi One', sans-serif;
+    font-weight: 400;
+    cursor: url('../img/chrupek-cursor.png'),auto;
+}
+
 body{
     background-color: wheat;
+    cursor: url('../img/chrupek-cursor.png'),auto;
 }
 
 h1 {

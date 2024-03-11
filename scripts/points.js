@@ -40,4 +40,5 @@ function checkPoints() {
 
     info.innerHTML = "Twoje punkty: " + punkty;
 
+
 }

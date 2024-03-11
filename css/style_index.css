@@ -1,7 +1,7 @@
 *{
     font-family: 'Madimi One', sans-serif;
     font-weight: 400;
-    cursor: url('chrupek-cursor.png'),auto;
+    cursor: url('../img/chrupek-cursor.png'),auto;
 }
 body{
     background-color: wheat;
@@ -86,16 +86,16 @@ body{
 .button-48:hover:before {
   animation: opacityFallbackIn 0s step-start forwards;
   clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
-  cursor: url('chrupek.png');
-  background-image: url("chrupek-przerwa5px.png");
+  cursor: url('../img/chrupek.png');
+  background-image: url("../img/chrupek-przerwa5px.png");
   background-repeat: repeat;
 
 }
 
 .button-48:after {
   background-color: #FFFFFF;
-  cursor: url('chrupek.png');
-  background-image: url("chrupek-przerwa5px.png");
+  cursor: url('../img/chrupek.png');
+  background-image: url("../img/chrupek-przerwa5px.png");
   background-repeat: repeat;
   font-weight: 700;
   color: white;

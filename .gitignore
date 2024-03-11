@@ -1,4 +1,5 @@
 other/
+lekcja/
 
 *.log
 .env

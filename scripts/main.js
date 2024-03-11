@@ -13,10 +13,6 @@ function clicked(id) {
 
 }
 
-function load() {
-
-}
-
 function checkWin() {
     var col1 = document.getElementById("col1").classList.contains("zaznaczone");
     var col2 = document.getElementById("col2").classList.contains("zaznaczone");

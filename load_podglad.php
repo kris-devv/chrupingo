@@ -5,6 +5,7 @@ if(!isset($_SESSION["name"])) {
     header('Location: index.php');
 }
 echo 'Name: '.$_SESSION['name'];
+
 function load_preds($col_id) {
 
     include "db_connect.php";
@@ -36,7 +37,6 @@ function load_preds($col_id) {
                 </script>';
         }
     }
-    
     $_SESSION["pred_num"]++;
     mysqli_close( $conn );
 }

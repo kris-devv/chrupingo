@@ -9,6 +9,7 @@
     <link rel="icon" href="img/chrupek.png">
     <title>CHRUPINGO</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="scripts/points.js"></script>
 </head>
 <body>    
     <main id="main">
@@ -17,6 +18,7 @@
         ?>
         <h1>CHRUPINGO</h1>
         <h2 id="info">Sprawdź swoje wyniki:</h2>
+        <p id="punkty"></p>
         <table class="bingo">
             <tr>
                 <td id="col1" class="niezaznaczone"><?php load_preds("col1"); ?></td>
@@ -34,6 +36,11 @@
                 <td id="col9" class="niezaznaczone"><?php load_preds("col9"); ?></td>
             </tr>
         </table>
+
+        <script type="text/javascript">
+            checkPoints();
+        </script>
+        
     </main>
     
 </body>
